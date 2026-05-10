@@ -5,11 +5,11 @@ $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
-    $email = $_POST["email"];
+    $fullname = $_POST["fullname"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
-    $stmt = $conn->prepare("INSERT INTO account (username, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $username, $email, $password);
+    $stmt = $conn->prepare("INSERT INTO account (username, fullname, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $fullname, $password);
 
     if ($stmt->execute()) {
         $message = "User created successfully!";
@@ -25,8 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label>Username:</label><br>
     <input type="text" name="username" required><br><br>
 
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <label>Full Name:</label><br>
+    <input type="fullname" name="fullname" required><br><br>
 
     <label>Password:</label><br>
     <input type="password" name="password" required><br><br>
