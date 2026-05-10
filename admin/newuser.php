@@ -1,10 +1,9 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "socialnet");
+$conn = new mysqli("localhost", "socialadmin", "password149", "socialnet");
 
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
