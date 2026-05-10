@@ -9,7 +9,7 @@ if (!isset($_SESSION["user_id"])) {
 
 // 2. DB connection
 require_once __DIR__ . "/../config.php";
-
+require_once __DIR__ . "/partials/menubar.php";
 // 3. Get current user info
 $user_id = $_SESSION["user_id"];
 
