@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS account (
 	description TEXT 
 );
 
-CREATE USER IF NOT EXISTS 'socialuser'@'localhost' IDENTIFIED BY 'password123';
-GRANT ALL PRIVILEGES ON socialnet.* TO 'socialuser'@'localhost';
+CREATE USER IF NOT EXISTS 'socialadmin'@'localhost' IDENTIFIED BY 'password149';
+GRANT ALL PRIVILEGES ON socialnet.* TO 'socialadmin'@'localhost';
 FLUSH PRIVILEGES;
 

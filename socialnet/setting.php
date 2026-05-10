@@ -33,7 +33,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $user = $stmt->get_result()->fetch_assoc();
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/socialnet/assets/style.css">
+</head>
 
+<body>
+
+<?php require_once __DIR__ . "/partials/menubar.php"; ?>
+
+<div class="container">
 <h2>Settings</h2>
 
 <p><b>Username:</b> <?php echo $user["username"]; ?></p>
@@ -53,3 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <p style="color:green;">
     <?php echo $message; ?>
 </p>
+</div>
+
+</body>
+</html>

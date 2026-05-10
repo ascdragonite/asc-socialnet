@@ -32,7 +32,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/socialnet/assets/style.css">
+</head>
 
+<body>
+
+
+<div class="container">
 <h2>Sign In</h2>
 
 <form method="POST">
@@ -46,3 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </form>
 
 <p style="color:red;"><?php echo $error; ?></p>
+</div>
+
+</body>
+</html>

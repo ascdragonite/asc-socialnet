@@ -34,8 +34,17 @@ if (!$profile) {
 }
 ?>
 
-<h2>Profile Page</h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/socialnet/assets/style.css">
+</head>
 
+<body>
+
+<?php require_once __DIR__ . "/partials/menubar.php"; ?>
+<div class="container">
+<h2>Profile Page</h2>
 <p><b>Owner:</b> <?php echo $profile["username"]; ?></p>
 <p><b>Full Name:</b> <?php echo $profile["fullname"]; ?></p>
 
@@ -45,3 +54,6 @@ if (!$profile) {
 <p>
     <?php echo nl2br(htmlspecialchars($profile["description"])); ?>
 </p>
+</div>
+</body>
+</html>
