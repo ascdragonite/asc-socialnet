@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once __DIR__ . "/../config.php";
+require_once(__DIR__ . "/../config.php");
 
 $error = "";
 
@@ -21,6 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // login success
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["username"] = $user["username"];
+        $_SESSION["fullname"] = $user["fullname"];
+        $_SESSION["description"] = $user["description"];
+
 
         header("Location: /socialnet/index.php");
         exit;
