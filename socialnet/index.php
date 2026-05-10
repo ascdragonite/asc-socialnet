@@ -8,7 +8,7 @@ if (!isset($_SESSION["user_id"])) {
 }
 
 // 2. DB connection
-$conn = new mysqli("localhost", "socialuser", "password123", "socialnet");
+$conn = new mysqli("localhost", "socialadmin", "password149", "socialnet");
 
 // 3. Get current user info
 $user_id = $_SESSION["user_id"];
