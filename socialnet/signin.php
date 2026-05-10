@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conn = new mysqli("localhost", "socialadmin", "password149", "socialnet");
+require_once __DIR__ . "/../config.php";
 
 $error = "";
 
